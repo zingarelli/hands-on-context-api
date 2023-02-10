@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-
+import { useCartContext } from 'common/context/Cart'
 
 function Produto({
   nome,
@@ -12,6 +12,9 @@ function Produto({
   valor,
   unidade
 }) {
+  const { cart, addToCart, removeFromCart } = useCartContext();  
+  const productInCart = cart.find(item => item.id === id);
+
   return (
       <Container>
         <div>
@@ -26,13 +29,23 @@ function Produto({
         <div>
           <IconButton
             color="secondary"
+            disabled={!productInCart}
+            onClick={() => removeFromCart(id)}
           >
             <RemoveIcon />
           </IconButton>
-          <IconButton>
+          {
+            // shortcut to a ternary statement, it's the same as
+            // productInCart ? productInCart.qty : 0
+            (productInCart?.qty || 0)
+          }
+          <IconButton 
+            color="primary"
+            onClick={() => addToCart({ nome, foto, id, valor })}
+          >
             <AddIcon />
           </IconButton>
-        </div>
+        </div> 
       </Container>
   )
 }
