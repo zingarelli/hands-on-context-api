@@ -8,7 +8,7 @@ Praticando com a Context API em um cenário de e-commerce, compartilhando dados 
 | -------------  | --- |
 | :sparkles: Nome        | **Usando Context API em um carrinho de compras**
 | :label: Tecnologias | React
-| :rocket: URL         | 
+| :rocket: URL         | https://hands-on-context-api.vercel.app
 | :fire: Curso     | https://www.alura.com.br/curso-online-react-context-estados-globais-contextapi  
 
 ![](https://user-images.githubusercontent.com/19349339/218111687-9d6d516f-b47d-43c5-a23f-9d734436777a.png#vitrinedev)
@@ -23,7 +23,7 @@ O projeto foi disponibilizado com uma estrutura de arquivos e aparência das pá
 
 ## Detalhes do projeto
 
-Você pode [ver o projeto online clicando aqui]().
+Você pode [ver o projeto online clicando aqui](https://hands-on-context-api.vercel.app).
 
 Este é um projeto desenvolvido em React, para praticar o gerenciamento de estados e criação de hooks customizados utilizando a Context API. A aplicação é uma versão simples de uma loja online de produtos de feira e possui três páginas: 
 
@@ -32,6 +32,10 @@ Este é um projeto desenvolvido em React, para praticar o gerenciamento de estad
 2. Feira: é uma página que exibe alguns produtos de feira, sendo possível adicionar/remover items ao carrinho . Um ícone de carrinho vai sendo atualizado dinamicamente com a quantidade de itens selecionados;
 
 3. Carrinho de compras: exibe os produtos selecionados, o valor total, saldo corrente e o valor restante de saldo caso a compra seja efetuada. Há também uma seleção de formas de pagamento que, dependendo da forma escolhida, adiciona uma taxa extra ao valor total da compra. Há validação para impedir que a compra seja feita caso o saldo seja insuficiente ou caso não haja itens no carrinho. Ao efetuar a compra, o saldo é atualizado.
+
+**Gif mostrando uma compra sendo feita**
+
+![Gif mostrando uma compra sendo feita](https://user-images.githubusercontent.com/19349339/218125108-0a2384ce-b536-4b00-9bcb-27f12ce74f5c.gif)
 
 Para se trabalhar com os diferentes tipos de informação que trafegam entre os componentes e as páginas, bem como para evitar o chamado *prop drilling* (passagem de props entre componentes e subcomponentes), foram criados três arquivos de contexto: 
 
@@ -126,7 +130,7 @@ An initial version of the project was provided, containing a file structure and 
 
 ## Project details
 
-You can [view the project online by clicking here]().
+You can [view the project online by clicking here](https://hands-on-context-api.vercel.app).
 
 This project was developed using React in order to practice state management and custom hooks creation using the Context API. The app is a simple version of an online store for organic products and has three pages: 
 
@@ -135,6 +139,10 @@ This project was developed using React in order to practice state management and
 2. Store: this page shows some organic products that can be purchased. One can add and remove products to the cart. A cart icon is dynamically updated with the amount of items picked;
 
 3. Cart: display the products picked, total purchase amount, current wallet amount and the remaining wallet amount if the order is confirmed. One can also select a payment method (some of them adds a surcharge). If the wallet amount is insufficient or if there are no items in cart, the purchase button is deactivated. When the order is confirmed, wallet amount is updated.
+
+**Gif demoing a purchase (in Portuguese)**
+
+![Gif demoing a purchase](https://user-images.githubusercontent.com/19349339/218125108-0a2384ce-b536-4b00-9bcb-27f12ce74f5c.gif)
 
 In order to work with different types of information shared between pages and components, as well as to avoid *prop drilling*, three context files were created: 
 
